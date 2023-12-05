@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form id="form">
-        <legend>Enter book details</legend>
+    <h1>Library</h1>
+    <div class="shelf">
 
+    </div>
+    <form id="form" class="form">
+        <h2>Enter book details</h2>
         <p>
             <label for="title">Book Title</label>
             <input type="text" id="title"/>
@@ -26,14 +29,22 @@
             <input type="text" id="pages"/>
         </p>
 
-        <div>
-            <label for="read">Have read</label>
-            <input type="radio" id="read"/>
-        </div>
+        <fieldset>
+            <legend>Have you read it?</legend>
+            <p>
+                <label for="yes">Yes</label>
+                <input type="radio" id="yes" value="yes" name="read"/>
+            </p>
+            <p>
+                <label for="no">No</label>
+                <input type="radio" name="read" id="no" value="no">
+            </p>
+        </fieldset>
         
         <button class="add">add</button>
     </form>
-    <button id="btn" class="btn">Add a book</button>
+    <button id="new_book" class="btn">NEW BOOK</button>
+    <button id="show_books" class="btn">SHOW BOOKS</button>
     <script src="script.js"></script>
 </body>
 </html>
